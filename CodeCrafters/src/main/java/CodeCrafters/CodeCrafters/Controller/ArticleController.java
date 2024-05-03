@@ -1,8 +1,8 @@
 package CodeCrafters.CodeCrafters.Controller;
 
 import CodeCrafters.CodeCrafters.Services.ArticleService;
-import CodeCrafters.CodeCrafters.Services.ArticleServiceImpl;
 import CodeCrafters.CodeCrafters.model.Article;
+import CodeCrafters.CodeCrafters.model.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,8 +32,17 @@ public class ArticleController {
     public Article addArticle(@RequestBody Article a) {
         return articleService.addArticle(a);
     }
+// delete article
+    @DeleteMapping("/delete-article/{id}")
+    public void deleteArticle(@PathVariable("id") Long id) {
+        articleService.deletearticle(id);
+    }
 
-
+    // edit  article
+    @PutMapping ("/edit-article ")
+    public Article editArticle(@RequestBody Article a) {
+        return articleService.editArticle(a);
+    }
 
 
 

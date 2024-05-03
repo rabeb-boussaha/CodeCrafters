@@ -10,4 +10,8 @@ public interface ArticleService {
     default Article addArticle(Article a) {
         return null;
     }
+
+    void deletearticle(Long id);
+
+    Article editArticle(Article a) throws RuntimeException;
 }
