@@ -71,4 +71,9 @@ public void deleteUser(Long idUser) {
 
 }
 
+    @Override
+    public boolean isUserExists(Long id) {
+        return false;
+    }
+
 }
