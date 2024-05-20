@@ -8,9 +8,9 @@ public interface ArticleService {
     List<Article> retrieveAll();
 
     default Article addArticle(Article a) {
-        return null;
-    }
 
+        return a;
+    };
     void deletearticle(Long id);
 
     Article editArticle(Article a) throws RuntimeException;
